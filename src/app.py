@@ -49,7 +49,7 @@ def execute():
                     "nsjail.cfg",
                     "--",
                     "/sandbox_venv/bin/python",
-                    "/sandbox/runner.py",
+                    "/sandbox_venv/runner.py",
                     code_path,
                     result_path,
                 ],

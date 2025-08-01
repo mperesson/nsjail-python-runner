@@ -55,7 +55,7 @@ RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
 # Copy app files
 COPY entrypoint.sh /app/entrypoint.sh
 COPY src/app.py /app/app.py
-COPY nsjail/runner.py /sandbox/runner.py
+COPY nsjail/runner.py /sandbox_venv/runner.py
 COPY nsjail/nsjail.cfg /app/nsjail.cfg
 
 RUN chmod +x /app/entrypoint.sh
