@@ -35,13 +35,14 @@ WORKDIR /app
 COPY --from=build /nsjail/nsjail /usr/local/bin/nsjail
 
 RUN mkdir -p /sandbox && chmod 777 /sandbox
+RUN mkdir -p /sandbox_venv && chmod 777 /sandbox_venv
 
 # Sandbox venv setup
-RUN python -m venv /sandbox/venv && \
-    /sandbox/venv/bin/pip install --no-cache-dir --upgrade pip setuptools wheel
+RUN python -m venv /sandbox_venv && \
+    /sandbox_venv/bin/pip install --no-cache-dir --upgrade pip setuptools wheel
 
 COPY requirements-sandbox.txt .
-RUN /sandbox/venv/bin/pip install --no-cache-dir -r requirements-sandbox.txt
+RUN /sandbox_venv/bin/pip install --no-cache-dir -r requirements-sandbox.txt
 
 # API venv setup
 RUN python -m venv /app/venv
