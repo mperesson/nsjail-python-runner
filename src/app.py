@@ -48,7 +48,7 @@ def execute():
                     "--config",
                     "nsjail.cfg",
                     "--",
-                    "/usr/bin/python3",
+                    "/sandbox/venv/bin/python",
                     "/sandbox/runner.py",
                     code_path,
                     result_path,

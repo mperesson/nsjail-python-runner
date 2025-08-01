@@ -4,7 +4,7 @@ A small Flask service that allow Python code execution in a restricted space usi
 
 ### Requirements:
 * Docker
-* python 3.12
+* python 3.13
 * uv
 
 
