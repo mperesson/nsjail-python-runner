@@ -79,7 +79,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy server and runner
-COPY app.py /app/app.py
+COPY src/app.py /app/app.py
 COPY nsjail/runner.py /sandbox/runner.py
 COPY nsjail/nsjail.cfg /app/nsjail.cfg
 

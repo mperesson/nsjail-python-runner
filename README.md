@@ -1,6 +1,6 @@
 # NSJail Python runner
 
-A small FLask service that allow Python code execution in a restricted space using NSJail.
+A small Flask service that allow Python code execution in a restricted space using NSJail.
 
 ### Requirements:
 * Docker
